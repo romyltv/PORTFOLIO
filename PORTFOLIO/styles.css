@@ -6,11 +6,33 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sekuya&display=swap');
 
-.sekuya-regular {
-  font-family: "Sekuya", system-ui;
-  font-weight: 400;
-  font-style: normal;
+
+
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 20px;
 }
+
+::-webkit-scrollbar-track {
+  background-color: #ffd3aa; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff3018; 
+  border-radius: 20px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+  
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff9900; 
+}
+
+
+
+/* *FONT */
 
 
 * {
@@ -22,44 +44,80 @@
 
 
 body {
-    font-family: "Sekuya", system-ui;
-  font-weight: 400;
-  font-style: normal;
-
+    
+    font-family:  system-ui;
+    font-weight: 400;
     color: #333;
-    background-color: #fafafa;
+    background-color:   rgb(254, 249, 229, 255); ;
+   
+
+    
    
 }
 
+
+
 a {
-    color: #333;
+    color: #000000;
     text-decoration: none;
 }
+
 
 .container {
     padding: 0 50px;
 }
 
 /* HEADER & NAVBAR */
+
+
+/* État initial : La barre est une "bulle" flottante */
 .header {
-    background-color: #f5f5f5;
-    border-bottom: 1px solid #8b1f1f;
-    padding: 30px 0;
-    position: sticky;
+    background-color: rgba(43, 36, 34, 0.3);
+    backdrop-filter: blur(15px);
+    box-shadow: inset 6px 6px 20px rgba(204, 219, 232, 0.2), 
+    inset -6px -6px 20px rgba(255, 255, 255, 0.4);
+    
+    padding: 15px 0;
+    position: fixed; /* On passe en fixed pour un meilleur contrôle */
+    top: 15px;       /* Elle commence un peu plus bas */
+    left: 2.5%;
+    right: 2.5%;
+    width: 95%;
+    z-index: 1000;
+    border-radius: 5rem; /* Très arrondie au début */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Animation fluide */
+    
+    
+
+    
+    
+}
+
+/* État quand on scrolle : La barre se "plaque" et devient rectangulaire */
+.header.scrolled {
     top: 0;
-    z-index: 100;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0; /* Plus d'arrondis pour ne plus voir le fond */
+    background-color: rgba(255, 255, 255, 0.6); /* Plus opaque pour cacher le body */
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Légère ombre pour le détacher du contenu */
 
 }
 
 .header h1 {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+    
+    
 }
 
 .header h1 i {
-    font-size:12px
+    font-size:15px
 }
+
 
 .header .container:first-child {
     display: flex;
@@ -69,64 +127,77 @@ a {
 
 
 
-
-.navbar .container {
-    display: flex;
-    justify-content: flex-end;
-}
-
 .nav-links {
     list-style: none;
     display: flex;
     gap: 50px;
+    font-size: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+   
+     scroll-target-group: auto;
+    a:target-current {
+        color: hsl(17, 100%, 50%);
+    }
+}
 
-    font-size: 24px;}
 .nav-links a {
     position: relative;
     display: block;
     padding: 15px 0;
     font-weight: bold;
-    color: #333;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    display: inline-block;
+    text-transform: uppercase;
+     text-shadow: 0 0 15px rgba(255, 255, 255, 1);
 }
 
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 5px;
-    width: 0%;
-    height: 2px;
-    background-color: #8b1f1f;
-    transition: width 0.3s ease;
-}
+
+
 .nav-links a:hover {
-    color: #8b1f1f;
-}
-.nav-links a:hover::after {
-    width: 100%;
+    transform: scale(1.2); 
+    color: #ff6600; 
+    text-shadow: 0 0 15px rgba(255, 102, 193, 0.3);
 }
 
 
 /* SECTIONS */
 .section {
-    padding: 60px 0;
+    padding: 60px 80px;
 }
 
 
 
 .section h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 30px;
+    display: inline-block;
+
+    font-size: 21px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* Forme de l'étiquette */
+    padding: 10px 20px;
+    border-radius: 20px;
+   
+    margin-bottom: 50px;
+    position: relative;
+
+    background-color: rgba(43, 36, 34, 0.3);
+    transition: all 0.3s ease;
+   
+   
     
-    padding-bottom: 10px;
+
+    
+}
+
+.section h2:hover {
+    transform: scale(1.1);
+   
 }
 
 .section h3 {
     font-size: 18px;
-    font-weight: bold;
     margin-bottom: 15px;
 }
 
@@ -136,20 +207,24 @@ a {
     margin-bottom: 5px;
 }
 
-.section p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
+
 
 /* PRÉSENTATION */
 #presentation {
     height: 100vh; /* plein écran */
-    background-image: url("Images/heroimage.png"); 
+  
+    background-image: url(Images/wall2.jpg);
+  
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
+   box-shadow:  inset -3px -42px 54px 0px rgba(255, 3, 3, 0.1);
+
+
+  mask: 
+    radial-gradient(67.08px at 50% calc(100% - 90px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(67.08px at 50% calc(100% + 60px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
 
 }
 
@@ -158,35 +233,25 @@ a {
     height: 100%;
     display: flex;
     align-items: center; /* centre vertical */
+  
 }
 
-
-
-
-
-
-
-/* TEXTE global */
-.presentation-text  {
-   margin-left: 50px;
-    color: white;
-   
-}
 
 /* GROS TEXTE */
 .hero-title p {
     font-size: 70px;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.5;
     margin-bottom: 30px;
 }
 
 /* BLOC DESCRIPTION */
 .hero-description {
-    max-width: 70vw;              /* réduit la largeur → effet bloc */
-    background: rgba(0,0,0,0.4);  /* fond léger */
+    max-width: 50vw;              /* réduit la largeur → effet bloc */
+    background: rgba(0,0,0,0.3);  /* fond léger */
     padding: 20px;
     border-radius: 10px;
+    color: white;
 }
 
 /* TEXTE DESCRIPTION */
@@ -207,27 +272,26 @@ a {
     padding: 25px;
     border-radius: 20px;
 
-    background: rgba(255,255,255,0.6);
-    backdrop-filter: blur(8px);
-
-    border: 1px solid rgba(0,0,0,0.05);
+    background: rgba(255, 225, 213, 0.33);
+    backdrop-filter: blur(7px);
+    
+  
+    box-shadow:rgba(151, 110, 90, 0.2) 0px 50px 100px -20px, rgba(0, 0, 0, 0.2) 0px 30px 10px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
-.skill-names {
-    list-style: none;
-    display: flex;
-   flex-wrap: wrap;
-    font-size: 18px;
 
-}
+
 
 .skill-names {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 25px;
+   font-weight: bold;
 
 }
+
 .skill-names li {
+    font-size: 1.2em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,9 +299,12 @@ a {
 
     padding: 20px;
     border-radius: 20px;
+   
+    background: rgba(253, 162, 127, 0.01);
+    backdrop-filter: blur(7px);
+   
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 0px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;;
 
-    background: white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 
     transition: all 0.3s ease;
     
@@ -258,7 +325,7 @@ li img {
 
 #competences h3 {
     font-size: 22px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     position: relative;
 }
 
@@ -274,28 +341,15 @@ li img {
 }
 
 .skill-names li:hover {
-    background: linear-gradient(135deg, #ff7f50, #ff3cac);
+    background: linear-gradient(135deg, #ffa98a, #ff6c58);
     color: white;
 }
 
-#competences {
-    background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
-}
+
 
 /* PROJETS */
 
-.project-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between   ;
-    padding: 20px;
-    border-radius: 15px;
-    background-color: #fff;
-    border: 1px solid #eee;
-    height: 100%;
-    min-height: 380px;
-    transition: 0.3s;
-}
+
 
 .project-img {
     height: 120px;              
@@ -340,7 +394,7 @@ li img {
     padding: 6px 12px;
     border-radius: 999px;
 
-    background: linear-gradient(135deg, #ff7f50, #ff3cac);
+    background: linear-gradient(135deg, #ff7f50, #ff3b21);
     color: white;
 }
 
@@ -352,30 +406,37 @@ li img {
 }
 
 .project-item {
-    position: relative;
+   position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     padding: 25px;
     border-radius: 20px;
-
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-
-    border: 1px solid rgba(255,255,255,0.3);
-
     min-height: 400px;
-
     overflow: hidden;
-    transition: all 0.7s ease;
+    transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1); /* Transition plus pro */
+
+    /* EFFET VERRE PUR */
+    /* On remplace le gris par un blanc quasi invisible */
+    background: rgba(134, 116, 116, 0.05); 
+    
+    /* On augmente le flou pour l'aspect haut de gamme */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    /* Bordure type "Reflet de lumière" */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    /* Ombres : une externe pour le volume, une interne pour l'éclat */
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.1), 
+                inset 0 0 20px rgba(255,255,255,0.5);
 }
 
 .project-item::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(120deg, transparent, rgba(0, 255, 213, 0.2), transparent);
+    background: linear-gradient(120deg, transparent, rgba(255, 204, 180, 0.2), transparent);
     opacity: 0;
     transition: 0.3s;
 }
@@ -420,8 +481,8 @@ li img {
     padding: 30px;
     border-radius: 20px;
 
-    background: white;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     width: 80%;
 }
 
@@ -437,6 +498,7 @@ li img {
     color: #333;
 
     transition: 0.3s;
+    
 }
 
 .contact-info h3 {
@@ -445,7 +507,7 @@ li img {
 }
 
 .contact-info a:hover {
-    background: #f0f4ff;
+    background: #ffffff;
     transform: translateX(5px);
 }
 
@@ -469,12 +531,11 @@ li img {
     padding: 40px;
     border-radius: 30px;
 
-    background: radial-gradient(circle at top left, #ffffff, #f0f4ff);
-    border: 2px solid transparent;
+  
+   
 
-    box-shadow: 
-        0 10px 30px rgba(0,0,0,0.1),
-        inset 0 0 20px rgba(255,255,255,0.5);
+ 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
     position: relative;
     overflow: hidden;
@@ -521,7 +582,7 @@ li img {
     padding: 12px;
 
     border-radius: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #dfdbdb;
 
     font-size: 14px;
 
@@ -530,12 +591,12 @@ li img {
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #ff7f50;
+    border-color: #ff542a;
     box-shadow: 0 0 10px rgba(255,127,80,0.2);
 }
 
 .btn {
-    background: linear-gradient(135deg, #ff7f50, #ff3cac);
+    background: linear-gradient(135deg, #ff7f50, #ff462d);
     color: white;
 
     padding: 15px 35px;
@@ -549,6 +610,7 @@ li img {
     transition: 0.3s;
 
     position: relative;
+ 
     overflow: hidden;
 }
 
@@ -561,13 +623,20 @@ li img {
 
 /* FOOTER */
 .footer {
-    background-color: #f5f5f5;
-    border-top: 1px solid #ff0000;
-    padding: 30px 0;
+    background: linear-gradient(rgba(255, 236, 230, 0.8), rgba(255, 126, 94, 0.5));
+    padding: 30px 0 30px 0;
     text-align: center;
     font-size: 14px;
     color: #666;
+      mask: 
+    radial-gradient(67.08px at 50% 90px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(67.08px at 50% -60px,#0000 99%,#000 101%) 50% 30px/120px 100% repeat-x;
+
    
+}
+
+footer p {
+    padding-top: 40px;
 }
 
 

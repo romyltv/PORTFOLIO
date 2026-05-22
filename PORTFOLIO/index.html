@@ -12,14 +12,14 @@
     <header class="header">
         <div class="container">
         <div class="container">
-            <h1>Romy Léon-Taravel
+            <h1>Romy Léon - Taravel
             <br><i>Etudiante en BUT informatique à Grenoble</i>
             </h1>
            
             
         </div>
 
-         <nav class="navbar">
+         <nav class="navbar"> 
         <div class="container">
             <ul class="nav-links">
                 <li><a href="#presentation">Présentation</a></li>
@@ -27,9 +27,11 @@
                 <li><a href="#projets">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            
         </div>
+        </nav>
         </div>
-    </nav>
+    
 
     </header>
 
@@ -48,12 +50,13 @@
 
                     <div class="presentation-text">
                         <div class="hero-title">
-                        <p>Bonjour <br>je suis Romy Léon-Taravel</p>
+                        <p>Bonjour, <br>je suis Romy Léon-Taravel</p>
                         </div>
 
                         <div class= "hero-description">
                             <p>Je suis étudiante en première année de BUT Informatique. J'aime la création, la réflexion et la découverte.
-                            A l'avenir, j'aimerais pouvoir concilier mes centres d'intérêt, notamment l'art et l'informatique, en participant à des projets créatifs, novateurs..</p>
+                            A l'avenir, j'aimerais pouvoir concilier mes centres d'intérêt, notamment l'art et l'informatique, en participant à des projets créatifs, actuels. <br>
+                             Après le BUT informatique, je souhaiterais poursuivre mes études en école d'ingénieurs.</p>
                         </div>
                     </div>
 
@@ -245,6 +248,17 @@
             <p>&copy; Made with ❤️ by Romy Léon-Taravel</p>
         </div>
     </footer>
+
+    <script>
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+</script>
 </body>
 </html>
 
