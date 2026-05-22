@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap');
 
-/* ── Variables ─────────────────────────────────── */
+/* VARIABLES */
 :root {
-  --bg:       #F5F3EE;
+  --bg:      rgb(254, 249, 229, 255);
   --ink:      #1A1A18;
   --accent:   #C8502A;
   --muted:    #8A8880;
@@ -11,13 +10,11 @@
   --gap:      2rem;
 }
 
-/* ── Reset ──────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
   background: var(--bg);
   color: var(--ink);
-  font-family: 'DM Mono', monospace;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 0.875rem;
   line-height: 1.7;
   min-height: 100vh;
@@ -25,7 +22,7 @@ body {
   flex-direction: column;
 }
 
-/* ── Header / Nav ───────────────────────────────── */
+/* HEADER / NAV*/
 header {
   border-bottom: 1px solid var(--border);
   padding: 1.25rem 3rem;
@@ -47,7 +44,7 @@ header nav a:hover {
   color: var(--accent);
 }
 
-/* ── Main ───────────────────────────────────────── */
+/* MAIN */
 main.project-detail {
   flex: 1;
   max-width: 1100px;
@@ -56,7 +53,7 @@ main.project-detail {
   padding: 4rem 3rem;
 }
 
-/* ── Project Header ─────────────────────────────── */
+/* PROJECT HEADER*/
 .project-header {
   border-bottom: 1px solid var(--border);
   padding-bottom: 2rem;
@@ -68,11 +65,11 @@ main.project-detail {
 }
 
 .project-header h1 {
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 400;
+
+  font-size: 2.5rem;
+  font-weight: 500;
   line-height: 1.15;
-  max-width: 700px;
+  
 }
 
 .year {
@@ -86,7 +83,7 @@ main.project-detail {
   border-radius: 2px;
 }
 
-/* ── Project Info : two-column layout ──────────── */
+/* PROJECT INFO */
 .project-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -94,18 +91,19 @@ main.project-detail {
   align-items: start;
 }
 
-/* ── Cards ──────────────────────────────────────── */
+/* CARDS*/
 .description,
 .context {
   background: var(--card-bg);
   border: 1px solid var(--border);
   padding: 2rem;
+  border-radius: 2rem;
 }
 
-/* ── Headings ───────────────────────────────────── */
+/* HEADINGS */
 .description h2,
 .context h2 {
-  font-family: 'DM Serif Display', serif;
+
   font-size: 1.1rem;
   font-weight: 400;
   font-style: italic;
@@ -115,6 +113,7 @@ main.project-detail {
   border-bottom: 1px solid var(--border);
 }
 
+
 .context h3 {
   font-size: 0.7rem;
   letter-spacing: 0.15em;
@@ -123,7 +122,7 @@ main.project-detail {
   margin-bottom: 1rem;
 }
 
-/* ── Paragraphs ─────────────────────────────────── */
+/* PARAGRAPHS*/
 .description p,
 .context-item p {
   color: #3D3D3A;
@@ -135,7 +134,7 @@ main.project-detail {
   margin-bottom: 0;
 }
 
-/* ── Context items ──────────────────────────────── */
+/* CONTEXT ITEMS */
 .context-item {
   margin-bottom: 1.75rem;
   padding-bottom: 1.75rem;
@@ -148,7 +147,7 @@ main.project-detail {
   border-bottom: none;
 }
 
-/* ── Competences list ───────────────────────────── */
+/* COMPETENCES LIST */
 .competences-list ul {
   list-style: none;
   padding: 0;
@@ -164,7 +163,7 @@ main.project-detail {
   border-bottom: none;
 }
 
-/* inner list */
+/* LIST */
 .competences-list > ul > li > ul {
   margin-top: 0.4rem;
   padding-left: 1rem;
@@ -181,16 +180,18 @@ main.project-detail {
   color: var(--accent);
 }
 
-/* ── Footer ─────────────────────────────────────── */
+/* FOOTER */
 footer {
   border-top: 1px solid var(--border);
   padding: 1.25rem 3rem;
-  font-size: 0.72rem;
+  font-size: 0.95rem;
   color: var(--muted);
   letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
-/* ── Responsive ─────────────────────────────────── */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   header, footer { padding: 1rem 1.5rem; }
   main.project-detail { padding: 2.5rem 1.5rem; }
