@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAE Chatbot | Portfolio Romy</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .project-detail {
+            background: white;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 50px;
+        }
+
+        .project-detail h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #FF006E, #00D9FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .project-detail h2 {
+            font-size: 28px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #0D0221;
+            border-left: 4px solid #FF006E;
+            padding-left: 15px;
+        }
+
+        .project-detail p,
+        .project-detail ul {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #6C757D;
+            margin-bottom: 15px;
+        }
+
+        .project-detail ul {
+            margin-left: 20px;
+        }
+
+        .project-detail li {
+            margin-bottom: 10px;
+        }
+
+        .breadcrumb {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .breadcrumb a {
+            color: #FF006E;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 30px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tech-badge {
+            background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(0, 217, 255, 0.1));
+            border: 1px solid #FF006E;
+            color: #FF006E;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .project-detail {
+                padding: 30px;
+            }
+
+            .project-detail h1 {
+                font-size: 28px;
+            }
+
+            .project-detail h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="name-badge">
+                <h1>Romy Léon-Taravel</h1>
+                <p class="title">Étudiante en Informatique</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="../index.html#accueil" class="nav-link">Accueil</a></li>
+            <li><a href="../index.html#competences" class="nav-link">Compétences</a></li>
+            <li><a href="../index.html#projets" class="nav-link">Projets</a></li>
+            <li><a href="../index.html#formation" class="nav-link">Formation</a></li>
+            <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Portfolio</a> / <a href="../index.html#projets">Projets</a> / SAE Chatbot
+                </div>
+
+                <div class="project-detail">
+                    <h1>🤖 SAE Chatbot - Intelligence Artificielle</h1>
+                    <p style="font-size: 18px; color: #FF006E; margin-top: 10px; font-weight: 600;">SAE 1.05 | 2024-2025</p>
+
+                    <!-- Description -->
+                    <h2>📝 Description</h2>
+                    <p>
+                        Cette SAE avait pour objectif de concevoir et développer un chatbot intelligent capable de répondre 
+                        aux questions des utilisateurs de manière pertinente et contextuelle. Le projet a permis d'explorer 
+                        les concepts fondamentaux de l'intelligence artificielle et du traitement du langage naturel (NLP).
+                    </p>
+
+                    <!-- Objectifs -->
+                    <h2>🎯 Objectifs du projet</h2>
+                    <ul>
+                        <li>Comprendre les bases de l'IA et du machine learning</li>
+                        <li>Implémenter un système de chatbot fonctionnel</li>
+                        <li>Traiter le langage naturel pour interpréter les requêtes utilisateur</li>
+                        <li>Générer des réponses pertinentes et contextualisées</li>
+                        <li>Tester et optimiser la performance du chatbot</li>
+                    </ul>
+
+                    <!-- Technologies -->
+                    <h2>🛠️ Technologies utilisées</h2>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">NLP</span>
+                        <span class="tech-badge">NLTK</span>
+                        <span class="tech-badge">Machine Learning</span>
+                        <span class="tech-badge">JSON</span>
+                    </div>
+
+                    <!-- Compétences acquises -->
+                    <h2>💡 Compétences acquises</h2>
+                    <ul>
+                        <li><strong>Programmation Python avancée</strong> : Utilisation de bibliothèques spécialisées</li>
+                        <li><strong>Traitement du langage naturel</strong> : Tokenization, stemming, vectorisation</li>
+                        <li><strong>Algorithmie</strong> : Implémentation d'algorithmes de matching et de scoring</li>
+                        <li><strong>Structures de données</strong> : Utilisation de dictionnaires et listes pour la gestion des données</li>
+                        <li><strong>Debugging et optimisation</strong> : Amélioration des performances du chatbot</li>
+                    </ul>
+
+                    <!-- Travail en groupe -->
+                    <h2>👥 Travail en groupe</h2>
+                    <p>
+                        Ce projet a été réalisé en équipe de 3 personnes. La collaboration s'est basée sur une répartition 
+                        des tâches claire :
+                    </p>
+                    <ul>
+                        <li><strong>Personne 1</strong> : Recherche et documentation sur NLP</li>
+                        <li><strong>Personne 2</strong> : Implémentation du moteur de réponse</li>
+                        <li><strong>Personne 3 (moi)</strong> : Interface utilisateur et intégration</li>
+                    </ul>
+                    <p>
+                        La communication au sein du groupe a été essentielle pour garantir une cohésion entre les différents 
+                        modules développés en parallèle.
+                    </p>
+
+                    <!-- Travail individuel -->
+                    <h2>🎓 Contribution personnelle</h2>
+                    <p>
+                        J'ai été responsable du développement de l'interface utilisateur et de l'intégration des différents 
+                        modules développés par l'équipe.
+                    </p>
+                    <ul>
+                        <li>Création d'une interface CLI (Command Line Interface) conviviale</li>
+                        <li>Intégration des modules NLP et réponse</li>
+                        <li>Gestion des entrées/sorties utilisateur</li>
+                        <li>Tests de l'ensemble du système et rapports de bugs</li>
+                        <li>Documentation du code et guide utilisateur</li>
+                    </ul>
+
+                    <!-- Utilisation -->
+                    <h2>⚙️ Comment utiliser le chatbot</h2>
+                    <p>
+                        Le chatbot peut être lancé via la ligne de commande et fonctionne en mode conversationnel. 
+                        L'utilisateur entre sa question et le chatbot répond en temps réel.
+                    </p>
+
+                    <!-- Résultats -->
+                    <h2>✅ Résultats obtenus</h2>
+                    <p>
+                        Le projet a été évalué satisfaisamment. Le chatbot est capable de :
+                    </p>
+                    <ul>
+                        <li>Répondre à plus de 50 questions différentes</li>
+                        <li>Adapter ses réponses selon le contexte</li>
+                        <li>Apprendre de nouvelles réponses (fonctionnalité additionnelle)</li>
+                        <li>Gérer les cas d'incompréhension avec des messages appropriés</li>
+                    </ul>
+
+                    <!-- Points d'amélioration -->
+                    <h2>🔄 Améliorations futures</h2>
+                    <ul>
+                        <li>Utiliser des modèles de deep learning plus avancés (BERT, GPT)</li>
+                        <li>Intégrer une base de données pour persister les conversations</li>
+                        <li>Développer une interface web pour améliorer l'accessibilité</li>
+                        <li>Implémenter l'apprentissage continu avec feedback utilisateur</li>
+                    </ul>
+
+                    <!-- Conclusion -->
+                    <h2>🎉 Conclusion</h2>
+                    <p>
+                        Ce projet m'a permis de comprendre les bases de l'intelligence artificielle et du traitement 
+                        du langage naturel. C'est une expérience enrichissante qui m'a renforcé ma passion pour ce domaine 
+                        et m'a montré les possibilités infinies de l'IA dans le développement logiciel.
+                    </p>
+
+                    <!-- Ressources -->
+                    <h2>📚 Ressources utilisées</h2>
+                    <ul>
+                        <li>Documentation NLTK : <a href="https://www.nltk.org/documentation" target="_blank" style="color: #FF006E;">nltk.org</a></li>
+                        <li>Tutoriels Python.org</li>
+                        <li>Articles académiques sur le NLP</li>
+                    </ul>
+
+                    <!-- Retour -->
+                    <a href="../index.html#projets" class="btn btn-primary back-link">
+                        ← Retour aux projets
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Romy Léon-Taravel. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
