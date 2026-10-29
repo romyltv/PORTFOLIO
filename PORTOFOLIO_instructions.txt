@@ -1,0 +1,20 @@
+﻿PORTOFOLIO : 
+Je dois réaliser mon portofolio d'étudiante en 1ère année de BUT informatique.
+Voici les critères d'évalutation : 
+
+Critères d'évaluation
+CONTENUPrésentation synthétique  de l'étudiantL'étudiant(e) a réalisé un encart ou une page dédiée où il/elle s'est présenté(e) succinctement. Cela comprend le nom, prénom, métier auquel il se prédestine, diplômes obtenus, etc.Page synthétisant les projetsL'étudiant(e) a réalisé un encart ou une page dédiée où il liste les projets sur lesquels il/elle a travaillé. Cela peut être une liste avec une image, un titre, une description succincte et un lien pour rediriger vers une page plus détaillée dédiée au projet.Présentation détaillée de chacun des projetsL'étudiant(e) a détaillé chacun de ses projets sur une page dédiée en respectant une structure donnée en PPP : titre, description, compétences, objectifs, travail en groupe, travail individuel dans le groupe, techniques et savoirs faire acquis...Moyens de contactL'étudiant(e) a donné les moyens de le/la contacter professionnellement : liens LinkedIn, Github, etc. formulaire de contact, adresse e-mail institutionnelle obfusquée, etc.RENDU VISUELRendu professionnelLe site a un aspect professionnel. Les étudiants étant libres de recourir à n'importe quels frameworks ou template pour rendre le site professionnel.Pertinence du site vis-à-vis-du parcours ou du métier cibléet en lien avec le métier recherché par l'étudiant(e)OriginalitéLe site a un caractère original
+Pour le contenu avec mes projets 	etc je remplirais moi-même.
+Il faut que le portofolio soit profesionel et je tiens au coté original / unique.  Je pense que je veux des couleurs pétantes, des formes interessante. 
+Des points importants : il faut une navbarre, soit horizontale soit verticale, il faut que mon prenom et nom soit écrit quelque part et que ca ne quitte pas l'écran 
+Cela comprend le nom, prénom, métier auquel il se prédestine, diplômes obtenus, etc. :
+Romy Léon-Taravel, étudiante en informatique. Je suis intéressée par la création, réfléxion, etc 
+Metier : interesse par  la recherche etc.
+Diplôme : brevet mention tres bien, bac generale math nsi maths expertes latin mention tres bien felicitation du jury
+--
+les projets sur lesquels il/elle a travaillé. Cela peut être une liste avec une image, un titre, une description :
+SAE chatbot, SAE Debian installation d'un poste pour le develepomment, SAE Base de données, SAE site web,Projet tropees NSI minis jeux
+Page destinée pour chaque projet avec descrption etc technologies utilises, competence apprise .. ;
+Aussi les languages maitrisé : sql, css, html , java, python
+
+Etc donne moi des inspis et conseils.
