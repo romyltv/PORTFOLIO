@@ -1,2 +1,7 @@
-﻿form actif
-nouveauc proket et competences
+﻿A modifier :
+Changer texte actuel
+rajouter outils / langage
+nelevr et rajouter projeys
+form fonctionel  X
+scroll spy 
+rajouter pictohramme pour projet - duree et nb personnes 
