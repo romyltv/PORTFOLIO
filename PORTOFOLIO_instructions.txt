@@ -1,7 +1,7 @@
 ﻿A modifier :
 Changer texte actuel
-rajouter outils / langage
+rajouter outils / langage X 
 nelevr et rajouter projeys
 form fonctionel  X
-scroll spy 
+scroll spy X
 rajouter pictohramme pour projet - duree et nb personnes 

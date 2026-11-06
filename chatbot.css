@@ -186,6 +186,7 @@ main.project-detail {
 /* ── Footer ─────────────────────────────────────── */
 footer {
   border-top: 1px solid var(--border);
+  text-align: center;
   padding: 1.25rem 3rem;
   font-size: 0.72rem;
   color: var(--muted);

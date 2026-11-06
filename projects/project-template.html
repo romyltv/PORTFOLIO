@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAE Chatbot | Portfolio Romy</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         .project-detail {
             background: white;
@@ -71,21 +72,42 @@
             margin-top: 30px;
         }
 
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
+        .context-icons {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin: 0 0 28px;
+            padding: 0 0 28px;
+            border-bottom: 1px solid #e0e0e0;
         }
 
-        .tech-badge {
-            background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(0, 217, 255, 0.1));
-            border: 1px solid #FF006E;
+        .context-icons li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .context-icons i {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: #FF006E;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 600;
+            background: rgba(255, 0, 110, 0.1);
+            border-radius: 50%;
+        }
+
+        .context-icons span {
+            font-size: 15px;
+        }
+
+        .context h3 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: #0D0221;
         }
 
         @media (max-width: 768px) {
@@ -99,6 +121,10 @@
 
             .project-detail h2 {
                 font-size: 20px;
+            }
+
+            .context-icons {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -155,25 +181,37 @@
                         <li>Tester et optimiser la performance du chatbot</li>
                     </ul>
 
-                    <!-- Technologies -->
-                    <h2>🛠️ Technologies utilisées</h2>
-                    <div class="tech-stack">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">NLP</span>
-                        <span class="tech-badge">NLTK</span>
-                        <span class="tech-badge">Machine Learning</span>
-                        <span class="tech-badge">JSON</span>
+                    <div class="context">
+                        <h2>Contexte</h2>
+                        <ul class="context-icons">
+                            <li>
+                                <i class="fa-solid fa-user-group"></i>
+                                <span>3 personnes</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-book-open"></i>
+                                <span>SAE 1.05</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-laptop-code"></i>
+                                <span>Python, NLP, NLTK, machine learning, JSON</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <span>Année universitaire 2024-2025</span>
+                            </li>
+                        </ul>
+                        <div class="context-item">
+                            <h3>Compétences développées</h3>
+                            <ul class="competences-list">
+                                <li><strong>Programmation Python avancée</strong> : Utilisation de bibliothèques spécialisées</li>
+                                <li><strong>Traitement du langage naturel</strong> : Tokenization, stemming, vectorisation</li>
+                                <li><strong>Algorithmie</strong> : Implémentation d'algorithmes de matching et de scoring</li>
+                                <li><strong>Structures de données</strong> : Utilisation de dictionnaires et listes pour la gestion des données</li>
+                                <li><strong>Debugging et optimisation</strong> : Amélioration des performances du chatbot</li>
+                            </ul>
+                        </div>
                     </div>
-
-                    <!-- Compétences acquises -->
-                    <h2>💡 Compétences acquises</h2>
-                    <ul>
-                        <li><strong>Programmation Python avancée</strong> : Utilisation de bibliothèques spécialisées</li>
-                        <li><strong>Traitement du langage naturel</strong> : Tokenization, stemming, vectorisation</li>
-                        <li><strong>Algorithmie</strong> : Implémentation d'algorithmes de matching et de scoring</li>
-                        <li><strong>Structures de données</strong> : Utilisation de dictionnaires et listes pour la gestion des données</li>
-                        <li><strong>Debugging et optimisation</strong> : Amélioration des performances du chatbot</li>
-                    </ul>
 
                     <!-- Travail en groupe -->
                     <h2>👥 Travail en groupe</h2>
